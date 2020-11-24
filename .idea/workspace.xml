@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="173ae290-2127-4434-b6ae-32eb3731b648" name="Default Changelist" comment="" />
+    <list default="true" id="173ae290-2127-4434-b6ae-32eb3731b648" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/o-nas.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/add-post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.php" beforeDir="false" afterPath="$PROJECT_DIR$/setup.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +22,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1jSXLzyk1xue9Nf3zXJjAbEZwgn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -26,12 +35,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/actions" />
+      <recent name="$PROJECT_DIR$/pages" />
     </key>
   </component>
   <component name="RunManager">
@@ -64,7 +76,11 @@
       <workItem from="1604396069347" duration="633000" />
       <workItem from="1604404007623" duration="5684000" />
       <workItem from="1604999663837" duration="300000" />
-      <workItem from="1605000104713" duration="2830000" />
+      <workItem from="1605000104713" duration="10433000" />
+      <workItem from="1605116049627" duration="1213000" />
+      <workItem from="1605612925626" duration="12400000" />
+      <workItem from="1605766176525" duration="10000" />
+      <workItem from="1606193538749" duration="2163000" />
     </task>
     <servers />
   </component>
@@ -76,5 +92,9 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="539" y="392" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1603800212994" />
+    <state x="2020" y="123" width="1720" height="857" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1606196348397">
+      <screen x="1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2020" y="123" width="1720" height="857" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1920.1057/1920.23.1920.1057/3840.87.1920.1057@1920.23.1920.1057" timestamp="1606196348397" />
   </component>
 </project>

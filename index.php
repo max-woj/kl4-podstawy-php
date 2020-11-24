@@ -1,54 +1,39 @@
 <?php
-include_once 'setup.php';
-global $userIsLogged;
-global $login;
+
+// Uwaga na podatności typu SQL injection! https://www.php.net/manual/en/security.database.sql-injection.php
+
+
+$link = new mysqli("127.0.0.1", "root", "root", 'testzsbe');
+
+if(!$link){
+	echo "crash! " . $link->error;
+	die();
+}
+//	echo "Connected";
+
+$result = $link->query("SELECT * FROM users WHERE users.`username` = '{$_POST['username']}'");
+
+$selectedUser = $result->fetch_assoc();
+$logged = false;
+if($selectedUser['password'] === md5($_POST['password'])){
+	$logged = true;
+}
 ?>
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><?= $siteTitle ?></title>
+	<meta charset="UTF-8">
+	<title>Sign Up</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+	<style type="text/css">
+        body{ font: 14px sans-serif; }
+        .wrapper{ width: 350px; padding: 20px; }
+	</style>
 </head>
 <body>
 <?php include_once 'fragments/navbar.php' ?>
-<?php
-$person = [
-    "firstName" => "Adam",
-    "lastName" => "Kowalski",
-	"phoneNumber" => 234234234
-];
+<p>Strona główna</p>
 
-$person['address'] = 'słoneczna 5';
-
-class Person{
-	public function __construct($name, $secondName = 'Kowalski'){
-		$this->firstName = $name;
-		$this->lastName = $secondName;
-    }
-
-    public function displayName(){
-		echo "<p>Witaj, " . $this->firstName . " " . $this->lastName . "</p>";
-
-	}
-}
-
-$personObj = new Person('Adam', 'Nowak');
-?>
-<div class="content">
-	<?php if(true): ?>
-		<?php $personObj->displayName(); ?>
-	<?php else: ?>
-	<form action="pages/o-nas.php" method="get">
-		Użytkownik: <input type="text" name="user">
-		Hasło: <input type="password" name="password">
-		<button type="submit">Send</button>
-	</form>
-	<?php endif; ?>
-</div>
-<footer></footer>
 </body>
 </html>
-<?php

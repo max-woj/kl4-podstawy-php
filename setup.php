@@ -19,14 +19,13 @@ class PageLink extends Link{
 $siteTitle = 'Super strona testowa';
 $counter = 5;
 $navLinks = [
-    new PageLink('O nas', 'o-nas.php'),
-    new PageLink('O nas', 'o-nas.php'),
-    new PageLink('O nas', 'o-nas.php'),
+    new PageLink('Dodaj nowy post', 'add-post.php'),
+    new PageLink('Blog', 'blog.php'),
 ];
 $myBooleanValue = false;
 
-$login = $_GET['user'];
-$password = $_GET['password'];
+$login = $_POST['user'];
+$password = $_POST['password'];
 function processUser($login, $pass){
     if($pass === 'test'){
         return true;
@@ -36,4 +35,15 @@ function processUser($login, $pass){
 $userIsLogged = processUser($login, $password);
 
 
-?>
+
+$host =  '127.0.0.1';
+$userName = 'root';
+$password = 'root';
+global $link;
+/* Attempt to connect to MySQL database */
+$link = mysqli_connect($host, $userName, $password, 'testzsbe');
+
+// Check connection
+if($link === false){
+   echo "ERROR: Could not connect. " . mysqli_connect_error();
+}
